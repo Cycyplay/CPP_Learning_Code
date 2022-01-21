@@ -1,3 +1,4 @@
+#include "Clock.h"
 #include "Parsing.h"
 
 #include <chrono>
@@ -9,11 +10,17 @@
 int main(int argc, char** argv)
 {
     const auto events = parse_events(argc, argv);
+    Clock      c;
 
-    const auto program_duration = 15;
+    for (auto event : events)
+    {
+        c.add_event(event);
+    }
+
+    const auto program_duration = 22;
     for (int i = 0; i < program_duration; ++i)
     {
-        // clock.tick();
+        c.tick();
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
 
