@@ -2,10 +2,13 @@ add_executable(tp3-pokemons
     Pokemons/Main.cpp
     Pokemons/PC.h
     Pokemons/PC.cpp
+    Pokemons/Pokeball.cpp
     Pokemons/Pokeball.h
+    Pokemons/Pokemon.cpp
     Pokemons/Pokemon.h
     Pokemons/Stdafx.h
     Pokemons/Tests.cpp
+    Pokemons/Trainer.cpp
     Pokemons/Trainer.h
 )
 
