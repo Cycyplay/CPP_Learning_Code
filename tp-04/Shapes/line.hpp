@@ -46,5 +46,12 @@ public:
         return {};
     }
 
-    ~Line() = default;
+    PointContainer intersect(const Shape& other) const override { return other.intersect(*this); }
+
+    std::ostream& print(std::ostream& os) const override
+    {
+        return os << "line through " << first << " & " << last;
+    }
+
+    ~Line() {};
 };

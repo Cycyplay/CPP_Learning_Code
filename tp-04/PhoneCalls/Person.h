@@ -18,6 +18,8 @@ public:
 
     void set_position(int position) { _position = position; }
 
+    std::string_view get_name() const { return _name; }
+
 private:
     const std::string _name;
     int               _position = 0;
